@@ -53,12 +53,8 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Configure authentication for GitHub Packages
-        run: |
-          echo "@OWNER:registry=https://npm.pkg.github.com" >> ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" >> ~/.npmrc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+      - name: Authenticate Bun for GitHub Packages
+        run: bun login --token "${{ secrets.NODE_AUTH_TOKEN }}"
 
       - name: Build package
         run: bun run build
