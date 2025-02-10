@@ -20,5 +20,9 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "moment": "^2.29.4"
+  }, 
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "name": "https://github.com/Kristinnfb/assignment-2-testing-main.git"
   }
 }
