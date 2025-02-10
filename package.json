@@ -5,7 +5,8 @@
   "scripts": {
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "coverage": "vitest --coverage"
+    "coverage": "vitest --coverage",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
