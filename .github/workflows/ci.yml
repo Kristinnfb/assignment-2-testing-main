@@ -55,6 +55,8 @@ jobs:
 
       - name: Build package
         run: bun run build
-
+      
       - name: Publish to GitHub Packages
         run: bun publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
