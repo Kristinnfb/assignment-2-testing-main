@@ -23,6 +23,7 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/",
-    "name": "https://github.com/Kristinnfb/assignment-2-testing-main.git"
+    "name": "https://github.com/Kristinnfb/assignment-2-testing-main.git",
+    "scope": "@Kristinnfb/assignment-2-testing-main"
   }
 }
