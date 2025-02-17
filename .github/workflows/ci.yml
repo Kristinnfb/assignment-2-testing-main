@@ -1,10 +1,5 @@
 name: CI Pipeline
 
-# Declare permissions for the workflow
-permissions:
-  contents: read        
-  packages: write 
-
 on:
   push:
     branches:
@@ -14,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Declare permissions similar to the Docker workflow template
+    permissions:
+      contents: read        # Needed for checking out the repository
+      packages: write       # Needed for publishing to GitHub Packages
+
     steps:
       # Step 1: Checkout the repository
       - name: Checkout Repository
@@ -46,10 +46,12 @@ jobs:
           path: coverage
 
       # Step 7: Authenticate with GitHub Packages
+      # Write the correct npm registry auth token so that Bun (npm under the hood) can publish.
       - name: Authenticate with GitHub Packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > ~/.npmrc
 
       # Step 8: Publish Package to GitHub Packages
       - name: Publish Package
