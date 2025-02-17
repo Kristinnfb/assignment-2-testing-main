@@ -42,7 +42,7 @@ jobs:
 
       # Step 7: Authenticate with npm
       - name: Authenticate with npm
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN2 }}" > ~/.npmrc
 
       # Step 8: Publish Package to GitHub Packages
       - name: Publish Package
