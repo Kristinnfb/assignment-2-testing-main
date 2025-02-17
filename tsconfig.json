@@ -10,7 +10,8 @@
     "strict": true,                                      /* Enable all strict type-checking options. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-    "noEmit": true                                   /* Disable emitting files from a compilation. */
+    "noEmit": true,    
+    "typecheck": "tsc --noEmit"                              
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
