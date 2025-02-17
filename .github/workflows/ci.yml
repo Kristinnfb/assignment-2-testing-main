@@ -40,7 +40,7 @@ jobs:
           name: coverage-report
           path: coverage
 
-      # Step 7: Authenticate with npm
+      # Step 7: Authenticate with GitHub Packages
       - name: Authenticate with GitHub Packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
