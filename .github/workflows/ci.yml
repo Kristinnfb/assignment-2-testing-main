@@ -40,7 +40,11 @@ jobs:
           name: coverage-report
           path: coverage
 
-      # Step 7: Publish Package to GitHub Packages
+      # Step 7: Authenticate with npm
+      - name: Authenticate with npm
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      # Step 8: Publish Package to GitHub Packages
       - name: Publish Package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
