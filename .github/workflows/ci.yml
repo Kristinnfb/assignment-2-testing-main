@@ -41,10 +41,10 @@ jobs:
           path: coverage
 
       # Step 7: Authenticate with npm
-      - name: Authenticate with npm
+      - name: Authenticate with GitHub Packages
         env:
-          NPM_TOKEN2: ${{ secrets.NPM_TOKEN2 }}
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN2 }}" > ~/.npmrc
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
       # Step 8: Publish Package to GitHub Packages
       - name: Publish Package
