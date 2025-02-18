@@ -2,22 +2,32 @@
   "name": "@kristinnfb/assignment-2-testing-main",
   "version": "1.0.6",
   "description": "",
+  "type": "module",
   "repository": {
-    "type": "git",
+    "type": "git",  
     "url": "git+https://github.com/Kristinnfb/assignment-2-testing-main.git"
   },
   "scripts": {
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "coverage": "vitest --coverage",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix ",
+    "format": "prettier --write .",
+    "check-format": "prettier --check ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.13.1",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
     "@vitest/coverage-v8": "^3.0.6",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.5.1",
     "typescript": "^5.7.3",
     "vitest": "^3.0.5"
   },
