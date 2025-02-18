@@ -4,7 +4,7 @@
   "description": "",
   "repository": {
   "type": "git",
-  "url": "git+https://github.com/Kristinnfb/assignment-2-testing-main.git"
+  "url": "https://github.com/Kristinnfb/assignment-2-testing-main.git"
   },
   "scripts": {
     "test": "vitest",
