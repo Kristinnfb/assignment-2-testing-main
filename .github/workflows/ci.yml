@@ -59,7 +59,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: coverage
+          path: coverage/
 
   publish:
       # Declare permissions similar to the Docker workflow template
