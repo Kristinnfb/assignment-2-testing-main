@@ -60,6 +60,10 @@ jobs:
           path: coverage/
 
   publish:
+    permissions:
+      contents: read
+      packages: write
+      
     name: Publish Package
     runs-on: ubuntu-latest
     needs: Test 
