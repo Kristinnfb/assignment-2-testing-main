@@ -86,7 +86,7 @@ jobs:
       - name: Setup npm auth
         run: |
           echo "@kristinnfb:registry=https://npm.pkg.github.com/" > .npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN2 }}" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
 
       - name: Publish to GitHub Packages
         run: npm publish --access public
