@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/Kristinnfb/assignment-2-testing-main.git"
+    "type": "git",
+    "url": "git+https://github.com/Kristinnfb/assignment-2-testing-main.git"
   },
   "scripts": {
     "test": "vitest",
