@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "repository": {
-    "type": "git",  
+    "type": "git",
     "url": "git+https://github.com/Kristinnfb/assignment-2-testing-main.git"
   },
   "scripts": {
@@ -21,6 +21,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/eslint": "^9.6.1",
     "@types/node": "^22.13.1",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",
